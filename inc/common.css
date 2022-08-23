@@ -1,0 +1,394 @@
+@charset "utf-8"
+    
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Playfair+Display:wght@400;500;600;700;800&display=swap');
+
+	*{
+		box-sizing: border-box;
+		margin: 0; outline: 0;
+		font-family: 'Noto Sans KR', sans-serif, 'Playfair Display', serif;
+	}
+
+
+
+#navBox {
+    position: fixed;
+    top:0; left:0;
+    width:100%; height:90px;
+    background:transparent;
+    border-bottom: 1px solid rgba(243,243,243,.5);
+    z-index: 8;
+    transition: .3s;
+}
+
+#navInBox {
+    width:100%; max-width: 1800px; height:90px; 
+    margin: auto;
+    display: flex; flex-wrap: wrap; justify-content: space-between;
+    position:relative;
+    transition: .3s;
+}
+
+.logoBox {
+    width:30%;  height: 90px;
+    display: flex;  flex-wrap: wrap;
+    align-items: center;
+    /* border: 1px solid blue; */
+}
+
+.logoBox > img {
+    display: block;
+}
+
+#navi {
+    width:70%;
+    display: flex; flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+#navi ul {
+    list-style: none; padding:0;
+    
+}
+
+#navi a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-family: 'Playfair Display';
+    font-weight: 400;
+}
+
+#navi span {
+    font-family: 'Noto Sans KR';
+    font-weight: lighter;
+}
+
+#menu {
+    width:100%;
+    display: flex; flex-wrap: wrap;
+    position: relative;
+}
+
+.main {
+    width:16.6666%; line-height: 90px;
+    
+    /* border:1px solid yellow; */
+}
+
+.main>a {
+    color: #fff;
+    font-size: 1.05rem;
+    transition: .3s;
+    font-family: 'Playfair Display';
+}
+
+.main>a:hover {
+    font-weight: 900;
+}
+
+.subMenu {
+    width:100%; line-height: 150px;
+    background:transparent;
+    position: absolute;
+    top:100%; left:0;
+    display: none; 
+    flex-wrap:wrap; 
+
+    /* transition: .3s; */
+}
+
+.sub{
+    /* transition: .3s; */
+}
+
+.sub>a {
+    margin: 15px;
+    color:rgb(105, 105, 105);
+    transition: .3s;
+}
+
+.sub>a:hover {
+    color:  #bbb;
+}
+
+#subBack {
+    width:100%; height: 185px;
+    position: absolute;
+    top:100%; left:0;
+    background: #fff;
+    display:none; flex-wrap:wrap;
+    /* transition: .3s; */
+    overflow: hidden;
+}
+
+#subBack1 {
+    width:30%;
+}
+#subBack1 img {
+    display: block;
+    width:100%;
+}
+
+#subBack2{
+    width:70%;
+}
+/* 
+#view {
+    background: transparent;
+    width:60px; line-height:60px;
+    color: rgba(255,255,255,.95);
+    text-align: center;
+    font-size: 5rem;
+    cursor: pointer;
+    display: none;
+    font-weight: lighter;
+    
+}  */
+
+#view {
+    position: absolute;
+    top:50%; right:15px;
+    transform: translateY(-50%);
+    display: none;
+}
+
+input[id="menuicon"] {
+    display: none;
+}
+
+input[id="menuicon"] + label {
+    display: block;
+    width: 30px; height: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+input[id="menuicon"] + label span {
+    display: block;
+    position: absolute;
+    width: 100%; height: 1px;
+    background: #fff;
+    transition: .35s;
+}
+
+input[id="menuicon"] + label span:nth-child(1){
+    top:0;
+}
+
+input[id="menuicon"] + label span:nth-child(2){
+    top:50%;
+    transform: translateY(-50%);
+}
+
+input[id="menuicon"] + label span:nth-child(3){
+    bottom:0;
+}
+
+input[id="menuicon"]:checked + label span:nth-child(1){
+    top:50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+input[id="menuicon"]:checked + label span:nth-child(2){
+    opacity: 0;
+}
+
+input[id="menuicon"]:checked + label span:nth-child(3){
+    bottom:50%;
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+
+.navActive { 
+    background : #fff !important;
+} 
+
+.viewActive{top: 90px !important;right:0 !important}
+
+    
+/*푸터----------------------------*/
+
+
+#foot { 
+    width:100%; 
+    height: 280px !important;
+    margin:auto;
+    background-color: #333;
+    padding: 50px 0 ;
+
+}
+
+#footInBox{
+    width:100%;
+    margin:auto;
+    padding: 0 1rem;
+}
+
+#footTop {
+    border-bottom: 1px solid #444;
+    display: flex;
+    justify-content: space-between;
+    line-height: 2.5;
+    padding-bottom: 1.5rem;
+}
+
+#footInBox ul {
+    list-style: none;
+    padding:0;
+    display: flex;
+    
+}
+
+#footInBox li {
+    color: #333;
+    padding-right: 20px;
+}
+
+
+#footInBox a {
+    text-decoration: none;
+    color:#ccc;
+    text-align: center;
+    font-weight: bold;
+    font-size: .9rem;
+}
+
+#footBottom{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    font-size: 1.3rem;
+    color: #ddd;
+}
+
+#footBottom p{
+    color:#ccc;
+    line-height: 1.7rem;
+    font-size: .9rem;
+}
+
+#footBottomSns i{
+    width:50px; line-height: 50px;
+    border-radius: 50%;
+    background-color: #444;
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 5px;
+    transition: .3s;
+}
+
+#footBottomSns i:hover{
+    background-color: #777;
+}
+
+
+
+
+
+
+
+@media screen and (max-width:750px){
+    #view {display:block;}
+
+    #navBox {top:0; left:0;}
+
+    .logoBox{
+        width: 50%; 
+        justify-content: flex-start; 
+    }
+
+    #navi {
+        width:250px; height: calc(100vh - 90px);
+        position:fixed; top:90px; right:-270px;
+        transition:.3s;
+        background-color:#f8f7f5;
+        color: black;
+        border-left : 1px solid rgba(243,243,243,.5);
+    }
+    
+        #menu{
+            align-content: flex-start;
+        }
+
+        .main {
+            width:100%;
+            line-height: 70px;
+            
+        }
+
+    .main >a {
+        color: rgb(105, 105, 105);
+    }
+
+    .subMenu {
+        position: static; padding-top:0 !important;
+        
+            
+    }
+    .sub >  a {
+        color: rgb(105, 105, 105);
+        margin: 0;
+    }
+    
+    .sub{
+        width:100%;
+        line-height: 50px;
+        background-color: #ddd;
+        /* transition: .3s; */
+    }
+
+    #franchiseBox {display: none;}
+
+    #franchise2{display: block;}
+
+    #subBack {display:none;}
+    #subBack1 {display:none;}
+    #subBack {display:none;}
+
+
+    #foot { 
+        padding: 10px 0 ;
+    }
+    
+    #footInBox{
+        width:98%
+    }
+    
+    #footTop {
+        padding-bottom: 10px;
+    }
+    
+    
+    #footInBox li {
+        color: #333;
+        padding-right: 6px;
+        font-size: .8rem;
+    }
+    #footInBox li:last-child{
+        padding-right: 0;
+    }
+    
+    
+    #footInBox a {
+        text-decoration: none;
+        color:#ccc;
+        text-align: center;
+        font-weight: bold;
+        font-size: .9rem;
+    }
+    
+    #footBottom{
+        padding-top: .8rem;
+        display: block
+    }
+
+
+    #footBottomSns i{
+        width:35px; line-height: 35px;
+        font-size: 1.1rem;
+        margin-right: 5px;
+        margin-top: 5px;
+    }
+    
+}
+    

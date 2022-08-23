@@ -1,0 +1,527 @@
+@charset "utf-8"
+    
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css');
+
+	*{
+		box-sizing: border-box;
+		margin: 0; outline: 0;
+		font-family: 'Playfair Display', serif 'Noto Sans KR', sans-serif;
+	}
+
+
+
+/*헤더*/
+
+#header {
+    width:100%; height: 100vh; margin: auto;
+    position: relative;
+}
+
+
+#slideBox{
+
+}
+
+.slide{
+    width:100%; height:100%;
+    position:absolute; 
+    top:0; left:0; 
+}
+
+.slide:nth-child(1) { 
+    background: url(../images/header1.jpeg) no-repeat center;  
+    background-size: cover;
+    display: block;
+}
+
+.slide:nth-child(2) {
+    background:url(../images/header2.jpg) no-repeat center;
+    background-size:cover; 
+    display: none;}
+
+.slide:nth-child(3) {
+    background:url(../images/header3.jpg) no-repeat center; 
+    background-size:cover;  
+    display: none; }
+
+.slide:nth-child(4){
+    background:url(../images/header4.jpg) no-repeat center;
+    background-size:cover;
+    display: none; }
+
+.slide:nth-child(5){
+    background:url(../images/header5.jpeg) no-repeat center;
+    background-size:cover;
+    display: none; 
+}
+
+
+
+#circleBox {
+    position: absolute;
+    top:65%; left:50%;
+    transform: translate(-50%,-65%);
+    display: flex;
+}
+
+.circle {
+    width:9px; height: 9px;
+    background: #fff;
+    border-radius: 50%;
+    margin: 15px;
+    opacity: .55;
+    cursor: pointer;
+}
+
+.circle:first-child{
+    opacity:1;
+}
+
+#reservationBoxM {
+    display: none;
+}
+
+#reservationBox {
+    position: fixed;
+    top:90px; right: 0;
+    display: flex; flex-wrap: wrap;
+    z-index: 999;
+}
+
+
+.reservationBt{
+    width:130px; line-height: 60px;
+    text-align: center;
+}
+
+.reservationBt a{
+    font-size: 0.95rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    display: block;
+    width:100%;
+}
+
+.reservationLeft{
+    background: #c6a583;
+}
+
+.reservationRight {
+    background: #2a2a2a
+}
+
+
+#headerTitle{
+    width:90%;
+    position: absolute;
+    top:50%; left:50%;
+    transform: translate(-50%, -50%);
+}
+
+#headerTitle h1 {
+    font-family: 'Playfair Display';
+    font-size: 4rem;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 10px;
+    font-weight: 500
+}
+
+#headerTitle h2 {
+    font-size: 1.08rem;
+    text-align: center;
+    color: #fff;
+    font-weight: 400
+}
+
+#headerSearch{
+    width:100%; margin: auto;
+    position: absolute;
+    bottom:7%; left: 0;
+}
+
+#searchBox {
+    width:75%; margin: auto; height: 60px;
+    list-style: none; padding: 0;
+    display: flex; flex-wrap: wrap;
+    justify-content: center; align-items: center;
+    cursor: pointer;
+}
+.searchMenu {
+    width:16.6666%; line-height:  60px;
+    text-align: center;
+    border-right: 1px solid #ccc;
+    background: #fff;
+    color: #666;
+    cursor: pointer;
+}
+
+.searchMenu:last-child{
+    background: #c6a583;
+    border: none;
+}
+
+.searchMenu select {
+    border: none;
+    font-size: .9rem;
+    color: #666;
+    cursor: pointer;
+}
+
+.dateBox {
+    border:none;
+    font-size: .9rem;
+    color: #666;
+    font-family: ;
+    cursor: pointer;
+}
+
+.searchButton {
+    width:100%; 
+    border: none; 
+    background: none;
+    font-size: .9rem;
+    color: #fff;
+    cursor: pointer;
+    
+}
+
+
+/*섹션1*/
+
+#sec1{
+    width: 100%; height:100vh; margin: auto;
+    background:#fbf9f6;
+}
+
+.contents {
+    width: 100%; max-width: 1200px; height:100vh; margin: auto;
+}
+
+.sectionTitleBox {
+    width:100%; 
+    text-align:center;
+}
+
+.sectionTitle{
+    font-size: 3rem;
+    padding-top:120px;
+}
+
+.sectionTitle2{
+    padding-top:15px;
+    padding-bottom: 50px;
+}
+
+.container {
+    width:100%; 
+}
+
+#listBox1{
+    width:100%; position: relative;
+    overflow: hidden;
+}
+
+#slideBox1{
+    list-style:none; padding:0;
+    width: 200%; display: flex;
+}
+
+.slide1 {
+    width: calc(100% / 6);
+    padding: 0 8px;
+    cursor: pointer;
+    position: relative;
+}
+
+.thumb1{
+    width:100%; display: block;
+    transition: .3s;
+    
+}
+.thumb1:hover{
+    opacity: .6;
+}
+
+.event1 {
+    position:absolute;
+    bottom:31%; left:.5%;
+    padding: 8px 18px; 
+    background: #c6a583;
+    color:white;
+    font-size: 1.1rem;
+}
+
+.caption1{
+    padding : 10px 0;
+    cursor: pointer;
+}
+
+.caption1>h3 {
+    margin-top: 30px;
+}
+
+.caption1>p {
+    margin-top: 20px;
+    color: #888;
+}
+
+.slideButton {
+    position: absolute; top: 38%; transform: translateY(-65%); background: none;border: none; font-size: 3rem; color: rgba(255, 255, 255, 0.75); text-shadow: 0 0 5px rgba(0,0,0,.7); cursor: pointer;
+    transition: .3s;
+}
+
+.slideButton:hover { color: rgba(255, 255, 255,.95);}
+.slideLeft { left: 10px;}
+.slideRight { right: 10px;}
+
+
+
+/*섹션2*/
+
+#sec2 {
+    width:100%; height: 100vh; margin:auto;
+    overflow: hidden; 
+    position: relative; 
+}
+
+.center div img{
+    width:98%;
+}
+
+.center{
+    padding-bottom: 50px;
+}
+
+
+/*섹션3*/
+
+#sec3{
+    width:100% hight:100vh;
+	padding:0;
+	position:relative;
+}
+
+.center {
+    padding-top:0px;
+    padding-bottom:30px
+}
+
+.contents3 {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 3;
+    position: relative;
+}
+
+.contents3 > li {
+    width: 50%;
+    height: 100%;
+    border-right:1px solid rgba(255, 255, 255, .4);
+    list-style: none;
+    padding: 0;
+}
+
+.contents3 > li:last-of-type {
+	border-right:none;
+
+}
+
+.weddingBox{
+    background:url('../images/wedding.jpg') no-repeat center center/cover;
+}
+
+.meetingBox{
+    background:url('../images/meeting.jpg') no-repeat center center/cover;
+}
+
+.contents3 > li a {
+    width:100%;
+	height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+	flex-direction: column;
+    text-decoration: none;
+}
+
+.contents3 > li h2 {
+    font-size:3.3rem;
+	color:#fff;
+}
+
+.contents3 > li p{
+    font-size: 18px;
+    color: #fff;
+    margin-top: 23px;
+    line-height: 1.7;
+}
+
+.contents3 > li button {
+    margin-top: 100px;
+	font-size: 1rem;
+	border:1px solid #fff;
+    color: #fff;
+    background-color: transparent;
+    padding: 15px 60px;
+	display:inline-block;
+	transition:1s;
+	font-weight: 300;
+    cursor: pointer;
+}
+
+.contents3 > li a:hover button{
+    background: #c6a584;
+    border: 1px solid #c6a584;
+	transition:1s;
+}
+
+#top {
+    width:50px; line-height: 50px;
+    border-radius: 50%;
+    position: fixed; bottom: -80px; right: 20px;
+    font-size: .9rem; 
+    text-align: center;
+    background: #1e1e1e;
+    color: white;
+    cursor: pointer;
+    z-index: 99;
+}
+
+
+@media screen and (max-width:750px){
+
+    #headerTitle h1 {
+        font-size: 3rem;
+    }
+    
+    #headerTitle h2 {
+        font-size: 1rem;
+        text-align: center;
+        color: #fff;
+        font-weight: 400
+    }
+
+    #reservationBox {
+        z-index: 0;
+        display: none;
+    }
+
+    #headerSearch{
+        bottom:20%;
+    }
+
+    #searchBox {
+        width:95%;
+    }
+
+    .searchMenu{
+        margin-bottom: 5px;
+    }
+    .searchMenu:nth-child(1){
+        width:50%;
+    }
+
+    .searchMenu:nth-child(2){
+        width:50%;
+    }
+
+    .searchMenu:nth-child(3){
+        width:33.3333%;
+    }
+
+    .searchMenu:nth-child(4){
+        width:33.3333%;
+    }
+
+    .searchMenu:nth-child(5){
+        width:33.3333%;
+    }
+
+    .searchMenu:nth-child(6){
+        width:100%;
+    }
+
+    /*섹션1*/
+    .sectionTitle{
+        font-size: 2.3rem;
+    }
+
+    .slideButton {
+        top:32%;
+    }
+
+    .event1 {
+        bottom:31%;
+    }
+
+    /*섹션3*/
+    #sec3 {
+        padding: 0;
+    }
+
+    .contents3 {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .contents3 > li {
+        width: 100%;
+        
+    }
+
+    .weddingBox{
+        margin-top: 70px;
+    }
+
+    .contents3 > li p {
+        font-size: 1rem;
+        margin-top: 8px;
+    }
+    .contents3 > li h2 {
+        font-size: 2rem;
+        padding-top:40px
+    }
+    .contents3 > li a {
+        padding:80px 20px;
+        height: auto;
+    }
+    .contents3 > li button {
+        margin-top: 20px;
+        font-size: 12px;
+        padding: 4px 18px 5px;
+    }
+    .contents3 > li {
+        border-right:none;
+        border-bottom: 1px solid rgba(255, 255, 255, .4);
+    }
+    .contents3 > li:last-of-type {
+        border-bottom: none;
+    }
+    .contents3 > li.wedding {
+        background: url('../images/wedding.jpg') no-repeat center center/cover;
+    }
+    .contents3 > li.meeting {
+        background: url('../images/meeting.jpg') no-repeat center center/cover;
+    }
+    .contents3 > li a {
+    
+    }
+    
+    .contents3 > li a button {
+        background: transparent;
+        border: 1px solid white;
+        color: #fff;
+    }
+
+    .contents3 > li a button:hover {
+        border: 1px solid #c6a584;
+        background:#c6a584;
+    }
+}
